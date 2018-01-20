@@ -6,11 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Components</title>
 </head>
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
+      grid-auto-rows: minmax(60px, auto);
+    }
+    .wrapper > div {
+      background-color: #eee;
+      padding: 1em;
+    }
+    .wrapper > div:nth-child(odd){
+      background-color: #ddd;
+      padding: 1em;      
+    }
+    .nested {
+      display: grid;
+      grid-gap: 1em;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .nested > div {
+      border: 1px solid #333;
+      padding: 1em;
+    }
+  
+  </style>
 <body>
-  <h3>Components</h3>
-  <div id="result"></div>
-  <p id="onlineStatusMessage"></p>
-  <script src="app.js">
-  </script>
+  <div class="wrapper">
+    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    <div class="nested">
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+      <div>Lorem Ipsum</div>
+    </div>
+    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    <div id="result">Components</div>
+    <div id="onlineStatusMessage"></div>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
     "sidebar"
     "footer";
   grid-gap: 10px;
+  grid-auto-rows: minmax( 100px, auto);
 }
 
 .title {
@@ -38,8 +39,9 @@
 {
   .grid {
     display: grid;
+    /* grid-template-columns: repeat(4 1fr); */
     grid-template-columns: 1fr 
-    48% 48% 1fr;
+    500px 500px 1fr;
     grid-template-areas:
       ". title title ."
       ". header header ."
